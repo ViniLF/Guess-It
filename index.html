@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#121213" />
+
+    <title>Guess It - show your agility</title>
+
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dangrek&family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="title">Guess It</h1>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/viniciuslucasfaria/" class="social-icon" target="_blank" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+      </a>
+      <a href="https://github.com/ViniLF" class="social-icon" target="_blank" title="GitHub">
+          <i class="bi bi-github"></i>
+      </a>
+      <a href="https://x.com/vinisso_1" class="social-icon" target="_blank" title="Twitter">
+          <i class="bi bi-twitter"></i>
+      </a>
+      <a href="https://codepen.io/vinihlucas90" class="social-icon" target="_blank" title="CodePen">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-codepen" viewBox="0 0 16 16">
+            <path d="M0 8l7-4 7 4-7 4-7-4zm0 4l7 4 7-4-7-4-7 4z"/>
+        </svg>
+    </a>
+    </div>
+    <div class="notify" id="notify"></div>    
+    <div id="game"></div>
+    <div id="game-over-container">
+      <button id="restart-btn" class="hidden">Tentar novamente</button>
+    </div>
+    <div id="virtual-keyboard">
+      <div class="keyboard-row">
+        <button class="key" data-key="q">Q</button>
+        <button class="key" data-key="w">W</button>
+        <button class="key" data-key="e">E</button>
+        <button class="key" data-key="r">R</button>
+        <button class="key" data-key="t">T</button>
+        <button class="key" data-key="y">Y</button>
+        <button class="key" data-key="u">U</button>
+        <button class="key" data-key="i">I</button>
+        <button class="key" data-key="o">O</button>
+        <button class="key" data-key="p">P</button>
+      </div>
+      <div class="keyboard-row">
+        <button class="key" data-key="a">A</button>
+        <button class="key" data-key="s">S</button>
+        <button class="key" data-key="d">D</button>
+        <button class="key" data-key="f">F</button>
+        <button class="key" data-key="g">G</button>
+        <button class="key" data-key="h">H</button>
+        <button class="key" data-key="j">J</button>
+        <button class="key" data-key="k">K</button>
+        <button class="key" data-key="l">L</button>
+      </div>
+      <div class="keyboard-row">
+        <button class="key" data-key="z">Z</button>
+        <button class="key" data-key="x">X</button>
+        <button class="key" data-key="c">C</button>
+        <button class="key" data-key="v">V</button>
+        <button class="key" data-key="b">B</button>
+        <button class="key" data-key="n">N</button>
+        <button class="key" data-key="m">M</button>
+        <button class="key" id="backspace" onclick="removeLetter()">⌫</button>
+        <button class="key" id="enter" onclick="handleEnter()">ENTER</button>
+      </div>
+    </div>
+
+    <script defer src="./src/index.js" type="module"></script>
+  </body>
+</html>
